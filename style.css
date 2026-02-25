@@ -1,0 +1,285 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #272424;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  text-align: center;
+  padding: 40px;
+  background-color: #272424;
+  color: #fff;
+}
+/*************** NAV *********************/
+
+.logo img {
+  width: 200px;
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.menu a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
+/*************** MOBIL START *********************/
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+    background-color: transparent;
+    border: 0;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: darkgrey;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+    color: #272424;
+  }
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+main {
+  padding: 20px;
+}
+/*************** MOBIL SLUT *********************/
+
+/*************** NAV SLUT *********************/ /* 
+
+
+
+
+/* CSS og layoutkrav:
+Brug CSS - gerne grid, subgrid og/eller flex
+Layout skal være responsivt
+Lav gerne klasser som .soldout og .discount til at styre designet af det særlige ved designet af disse produkter. 
+  */
+
+/*************** KATEGORIER START *********************/
+.category_list_container ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  gap: 1rem;
+  justify-content: center;
+  list-style-type: none;
+}
+
+/* forsidens felter */
+.category_list_container ul li {
+  justify-content: center;
+  text-align: left;
+  font-weight: 500;
+  padding: 15px;
+  color: #333;
+  background-color: #ff0000fa;
+  border: 2px solid #333;
+  border-radius: 3px;
+}
+
+.category_list_container ul li a {
+  text-decoration: none;
+}
+/*************** MOBIL START *********************/
+@media screen and (max-width: 800px) {
+  .category_list_container ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    list-style-type: none;
+  }
+}
+
+/*************** KATEGORIER SLUT *********************/
+
+/*************** PRODUKTLISTE START *********************/
+.product_card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.productcard {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 6;
+  gap: 0;
+}
+
+.productdetails,
+.laegikurv {
+  border: #ff0000fa 2px solid;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #ff0000fa;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.laegikurv {
+  background-color: #272424;
+  border: none;
+}
+
+.produktnavn {
+  font-weight: 400;
+  font-size: 20px;
+}
+.brand {
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.price {
+  font-size: 15px;
+  font-weight: 400;
+  text-align: end;
+}
+
+.discount,
+.soldout {
+  font-size: 15px;
+  font-weight: 800;
+  color: #ff0000fa;
+  text-align: end;
+}
+
+/* .figure {
+} få placeret top af card? */
+
+@media screen and (max-width: 800px) {
+  .product_card_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* {
+    "category": "Footwear"
+  },
+  {
+    "category": "Free Items"
+  },
+  {
+    "category": "Personal Care"
+  },
+  {
+    "category": "Sporting Goods"
+  } */
+
+/*************** PRODUKTLISTE SLUT *********************/
+
+/*************** PRODUKT START *********************/
+
+/*************** PRODUKT SLUT *********************/
