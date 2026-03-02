@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <link rel="stylesheet" href="style.css" />
+    <!-- <script src="main.js"></script> -->
     <title>Accessories</title>
   </head>
 
@@ -28,148 +29,226 @@
         </button>
       </nav>
     </header>
-
+    <!-- pak det hele ind i links
+           toggle hvis ikke på udsalg/nedsat og hide elementer på pris rabat ting
+           husk at ind span på alle priser-->
     <!-- vise en liste over produkter (Husk markering (class) 1 på Tilbud, 1 Udsolgt og 1 både Tilbud og Udsolgt). 
      Brugeren har klikket på Accessories på forsiden. Vis 4 produkter. -->
     <main>
       <h1>Accessories</h1>
       <section class="product_card_container">
-        <article class="productcard">
-          <img
-            src="https://kea-alt-del.dk/t7/images/webp/640/15890.webp"
-            alt="product image"
-          />
-          <h3 class="produktnavn">Produktnavn</h3>
-          <p class="brand">Crocs X Tweety</p>
+        <a href="product.html">
+          <!-- slet class på link productdetails skal bruges senere i json sidste opgavedel -->
+          <article class="productcard">
+            <div class="imgwrap">
+              <img
+                src="https://kea-alt-del.dk/t7/images/webp/640/15890.webp"
+                alt="product image"
+              />
+              <p class="hide">Udsolgt</p>
+              <p class="sale hide">
+                <span>%</span>
+              </p>
+            </div>
 
-          <p class="price">899,-</p>
-          <p class="discount"></p>
-          <p class="souldout"></p>
-          <a href="product.html" class="productdetails"> Product details </a>
-        </article>
+            <h3 class="produktnavn">Produktnavn</h3>
+            <p class="brand">Crocs <span>X</span> Tweety</p>
+            <div class="price">
+              <p><span>899</span>,-</p>
+              <p class="hide"><span>199</span>,-</p>
+            </div>
+          </article>
+        </a>
 
-        <article class="productcard">
-          <img
-            src="https://kea-alt-del.dk/t7/images/webp/640/16890.webp"
-            alt="product image"
-          />
-          <h3 class="produktnavn">Produktnavn</h3>
-          <p class="brand">Solbrillefabrikanten</p>
-          <p class="price">1.899,-</p>
-          <div class="discount">
-            <discount>Now <span>475</span>,-</discount>
-            <!-- lav discount grafik?? -->
-            <figure>Save <span>75</span>%</figure>
-          </div>
-          <a href="product.html" class="productdetails"> Product details </a>
-        </article>
+        <a href="product.html">
+          <article class="productcard">
+            <div class="imgwrap">
+              <img
+                src="https://kea-alt-del.dk/t7/images/webp/640/16890.webp"
+                alt="product image"
+              />
+              <p class="hide">Udsolgt</p>
+              <p class="sale">
+                30
+                <span>%</span>
+              </p>
+            </div>
 
-        <article class="productcard">
-          <img
-            src="https://kea-alt-del.dk/t7/images/webp/640/15590.webp"
-            alt="product image"
-          />
-          <h3 class="produktnavn">Produktnavn</h3>
+            <h3 class="produktnavn">Produktnavn</h3>
+            <p class="brand"><span>Solbrillefabrikanten </span></p>
+            <div class="price">
+              <p class="pricebefore"><span>1.899</span>,-</p>
+              <p class="priceafter"><span>899</span>,-</p>
+            </div>
+          </article>
+        </a>
 
-          <p class="brand">Shein</p>
+        <a href="product.html">
+          <article class="productcard">
+            <div imgwrap>
+              <img
+                src="https://kea-alt-del.dk/t7/images/webp/640/15590.webp"
+                alt="product image"
+                class="soldout"
+              />
+              <p class="soldout tekst">Udsolgt</p>
+              <p class="sale hide">
+                <span>%</span>
+              </p>
+            </div>
 
-          <p class="price">30,-</p>
-          <div class="soldout">
-            <!-- lav udsolgt grafik?? -->
-            <p>Sold out</p>
-          </div>
-          <a href="product.html" class="productdetails"> Product details </a>
-        </article>
+            <h3 class="produktnavn">Produktnavn</h3>
+            <p class="brand"><span>Shein</span></p>
 
-        <article class="productcard">
-          <img
-            src="https://kea-alt-del.dk/t7/images/webp/640/15891.webp"
-            alt="product image"
-          />
-          <h3 class="produktnavn">Produktnavn</h3>
+            <div class="price">
+              <p><span>899</span>,-</p>
+              <p class="hide"><span></span>,-</p>
+            </div>
+          </article>
+        </a>
 
-          <p class="brand">Crocs X Tweety</p>
+        <a href="product.html">
+          <!-- slet class på link productdetails skal bruges senere i json sidste opgavedel -->
+          <article class="productcard">
+            <div class="imgwrap">
+              <img
+                src="https://kea-alt-del.dk/t7/images/webp/640/15890.webp"
+                alt="product image"
+              />
+              <p class="hide">Udsolgt</p>
+              <p class="sale hide">
+                <span>%</span>
+              </p>
+            </div>
 
-          <div class="soldout">
-            <!-- lav udsolgt grafik?? -->
-            <p>Sold out</p>
-          </div>
-          <div class="discount">
-            <!-- lav discount grafik?? -->
-            <figure>Save <span>75</span>%</figure>
-          </div>
-          <a href="product.html" class="productdetails"> Product details </a>
-        </article>
+            <h3 class="produktnavn">Produktnavn</h3>
+            <p class="brand">Crocs <span>X </span> Tweety</p>
+            <div class="price">
+              <p><span>899</span>,-</p>
+              <p class="hide"></p>
+              <p><span>199</span>,-</p>
+            </div>
+          </article>
+        </a>
 
-        <article class="productcard">
-          <img
-            src="https://kea-alt-del.dk/t7/images/webp/640/15890.webp"
-            alt="product image"
-          />
-          <h3 class="produktnavn">Produktnavn</h3>
-          <p class="brand">Crocs X Tweety</p>
+        <a href="product.html">
+          <article class="productcard">
+            <div class="imgwrap">
+              <img
+                src="https://kea-alt-del.dk/t7/images/webp/640/16890.webp"
+                alt="product image"
+              />
+              <p class="hide">Udsolgt</p>
+              <p class="sale">
+                30
+                <span>%</span>
+              </p>
+            </div>
 
-          <p class="price">899,-</p>
-          <p class="discount"></p>
-          <p class="souldout"></p>
-          <a href="product.html" class="productdetails"> Product details </a>
-        </article>
+            <h3 class="produktnavn">Produktnavn</h3>
+            <p class="brand"><span>Solbrillefabrikanten </span></p>
+            <div class="price">
+              <p class="pricebefore"><span>1.899</span>,-</p>
+              <p class="priceafter"><span>899</span>,-</p>
+            </div>
+          </article>
+        </a>
 
-        <article class="productcard">
-          <img
-            src="https://kea-alt-del.dk/t7/images/webp/640/16890.webp"
-            alt="product image"
-          />
-          <h3 class="produktnavn">Produktnavn</h3>
-          <p class="brand">Solbrillefabrikanten</p>
-          <p class="price">1.899,-</p>
-          <div class="discount">
-            <discount>Now <span>475</span>,-</discount>
-            <!-- lav discount grafik?? -->
-            <figure>Save <span>75</span>%</figure>
-          </div>
-          <a href="product.html" class="productdetails"> Product details </a>
-        </article>
+        <a href="product.html">
+          <article class="productcard">
+            <div imgwrap>
+              <img
+                src="https://kea-alt-del.dk/t7/images/webp/640/15590.webp"
+                alt="product image"
+                class="soldout"
+              />
+              <p class="soldout tekst">Udsolgt</p>
+              <p class="sale hide">
+                <span>%</span>
+              </p>
+            </div>
 
-        <article class="productcard">
-          <img
-            src="https://kea-alt-del.dk/t7/images/webp/640/15590.webp"
-            alt="product image"
-          />
-          <h3 class="produktnavn">Produktnavn</h3>
+            <h3 class="produktnavn">Produktnavn</h3>
+            <p class="brand"><span>Shein</span></p>
 
-          <p class="brand">Shein</p>
+            <div class="price">
+              <p><span>899</span>,-</p>
+              <p class="hide"><span></span>,-</p>
+            </div>
+          </article>
+        </a>
+        <a href="product.html">
+          <!-- slet class på link productdetails skal bruges senere i json sidste opgavedel -->
+          <article class="productcard">
+            <div class="imgwrap">
+              <img
+                src="https://kea-alt-del.dk/t7/images/webp/640/15890.webp"
+                alt="product image"
+              />
+              <p class="hide">Udsolgt</p>
+              <p class="sale hide">
+                <span>%</span>
+              </p>
+            </div>
 
-          <p class="price">30,-</p>
-          <div class="soldout">
-            <!-- lav udsolgt grafik?? -->
-            <p>Sold out</p>
-          </div>
-          <a href="product.html" class="productdetails"> Product details </a>
-        </article>
+            <h3 class="produktnavn">Produktnavn</h3>
+            <p class="brand">Crocs <span>X </span> Tweety</p>
+            <div class="price">
+              <p><span>899</span>,-</p>
+              <p class="hide"></p>
+              <p><span>199</span>,-</p>
+            </div>
+          </article>
+        </a>
 
-        <article class="productcard">
-          <img
-            src="https://kea-alt-del.dk/t7/images/webp/640/15891.webp"
-            alt="product image"
-          />
-          <h3 class="produktnavn">Produktnavn</h3>
+        <a href="product.html">
+          <article class="productcard">
+            <div class="imgwrap">
+              <img
+                src="https://kea-alt-del.dk/t7/images/webp/640/16890.webp"
+                alt="product image"
+              />
+              <p class="hide">Udsolgt</p>
+              <p class="sale">
+                30
+                <span>%</span>
+              </p>
+            </div>
 
-          <p class="brand">Crocs X Tweety</p>
+            <h3 class="produktnavn">Produktnavn</h3>
+            <p class="brand"><span>Solbrillefabrikanten </span></p>
+            <div class="price">
+              <p class="pricebefore"><span>1.899</span>,-</p>
+              <p class="priceafter"><span>899</span>,-</p>
+            </div>
+          </article>
+        </a>
 
-          <div class="soldout">
-            <!-- lav udsolgt grafik?? -->
-            <p>Sold out</p>
-          </div>
-          <div class="discount">
-            <!-- lav discount grafik?? -->
-            <figure>Save <span>75</span>%</figure>
-          </div>
-          <a href="product.html" class="productdetails"> Product details </a>
-        </article>
+        <a href="product.html">
+          <article class="productcard">
+            <div imgwrap>
+              <img
+                src="https://kea-alt-del.dk/t7/images/webp/640/15590.webp"
+                alt="product image"
+                class="soldout"
+              />
+              <p class="soldout tekst">Udsolgt</p>
+              <p class="sale hide">
+                <span>%</span>
+              </p>
+            </div>
+
+            <h3 class="produktnavn">Produktnavn</h3>
+            <p class="brand"><span>Shein</span></p>
+
+            <div class="price">
+              <p><span>899</span>,-</p>
+              <p class="hide"><span></span>,-</p>
+            </div>
+          </article>
+        </a>
       </section>
     </main>
-    <!-- <script src="main.js"></script> -->
 
     <footer>FashionRUs &copy; 2026</footer>
   </body>

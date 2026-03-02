@@ -134,7 +134,8 @@ nav {
     color: #272424;
   }
 }
-
+/*************** MOBIL SLUT *********************/
+/*************** NAV SLUT *********************/
 body {
   font-family:
     system-ui,
@@ -144,17 +145,22 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+  font-weight: 400;
 }
 
 main {
   padding: 20px;
 }
-/*************** MOBIL SLUT *********************/
 
-/*************** NAV SLUT *********************/ /* 
+h1 {
+  font-size: 2.2rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 
-
-
+h3 {
+  font-size: 1.5rem;
+}
 
 /* CSS og layoutkrav:
 Brug CSS - gerne grid, subgrid og/eller flex
@@ -177,14 +183,32 @@ Lav gerne klasser som .soldout og .discount til at styre designet af det særlig
   text-align: left;
   font-weight: 500;
   padding: 15px;
-  color: #333;
-  background-color: #ff0000fa;
+  color: black;
+  background-color: lightslategrey;
   border: 2px solid #333;
   border-radius: 3px;
 }
 
+a {
+  text-decoration: none;
+}
+/* lav a :hover og active */
+a:visited {
+  color: #333;
+}
+
 .category_list_container ul li a {
   text-decoration: none;
+}
+/* hvis liv til det lav ul li til kun a tags så hover css mm forenkles */
+
+.category_list_container ul li a:hover {
+  color: white;
+}
+.category_list_container ul li:hover {
+  background-color: #272424;
+  transform: scale(1.03);
+  color: white;
 }
 /*************** MOBIL START *********************/
 @media screen and (max-width: 800px) {
@@ -199,11 +223,22 @@ Lav gerne klasser som .soldout og .discount til at styre designet af det særlig
 /*************** KATEGORIER SLUT *********************/
 
 /*************** PRODUKTLISTE START *********************/
+div {
+  display: grid;
+}
+
+.imgwrap img,
+.soldout,
+.sale {
+  grid-column: 1;
+  grid-row: 1;
+}
 .product_card_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
+/* lavet på artiklen */
 .productcard {
   display: grid;
   grid-template-rows: subgrid;
@@ -211,51 +246,87 @@ Lav gerne klasser som .soldout og .discount til at styre designet af det særlig
   gap: 0;
 }
 
-.productdetails,
-.laegikurv {
-  border: #ff0000fa 2px solid;
+.productcard,
+.laegikurv,
+.retur {
+  border: rgba(112, 128, 144, 0.237) 2px solid;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
   margin-top: 10px;
   margin-bottom: 20px;
-  background-color: #ff0000fa;
-  text-align: center;
-  font-weight: 600;
-  text-decoration: none;
-  color: #ffffff;
+  background-color: rgb(172, 186, 200);
+  text-align: left;
   padding: 10px;
 }
 
-.laegikurv {
+/* knap */
+a.laegikurv,
+a.retur {
   background-color: #272424;
+  color: white;
   border: none;
+  width: 250px;
+  place-self: end;
+}
+
+.productcard:hover {
+  transform: scale(1.03);
 }
 
 .produktnavn {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1rem;
+  margin-top: 5px;
 }
 .brand {
   font-weight: 800;
-  font-size: 12px;
+  font-size: 0.7rem;
+  margin-top: 2.5px;
 }
 
 .price {
-  font-size: 15px;
-  font-weight: 400;
-  text-align: end;
+  justify-content: end;
+  display: flex;
+  margin-top: 5px;
+  font-size: 1rem;
 }
 
-.discount,
-.soldout {
-  font-size: 15px;
-  font-weight: 800;
+.pricebefore {
+  text-decoration: line-through;
+  margin-right: 5px;
+  font-size: 1rem;
+}
+
+.priceafter {
+  color: red;
+  font-size: 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.sale {
+  font-size: 1rem;
   color: #ff0000fa;
   text-align: end;
+  font-weight: 800;
 }
 
-/* .figure {
-} få placeret top af card? */
+p.sale {
+  padding: 10px;
+}
+
+img.soldout {
+  opacity: 30%;
+}
+.soldout.tekst {
+  font-size: 1rem;
+  color: #ff0000fa;
+  text-align: center;
+  align-self: center;
+  font-weight: 800;
+}
 
 @media screen and (max-width: 800px) {
   .product_card_container {
@@ -265,21 +336,24 @@ Lav gerne klasser som .soldout og .discount til at styre designet af det særlig
   }
 }
 
-/* {
-    "category": "Footwear"
-  },
-  {
-    "category": "Free Items"
-  },
-  {
-    "category": "Personal Care"
-  },
-  {
-    "category": "Sporting Goods"
-  } */
-
 /*************** PRODUKTLISTE SLUT *********************/
-
 /*************** PRODUKT START *********************/
+
+.product_details_list {
+  display: grid;
+  margin: 20px;
+  grid-template-columns: 1fr;
+}
+
+.wrap {
+  width: 400px;
+  justify-self: center;
+  border: 2px solid #272424;
+  border-radius: 6px;
+}
+
+.productdetails {
+  text-align: end;
+}
 
 /*************** PRODUKT SLUT *********************/
