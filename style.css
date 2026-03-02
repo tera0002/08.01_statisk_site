@@ -70,7 +70,9 @@ nav {
   color: #fff;
   text-decoration: underline;
 }
-
+.menu a:visited {
+  color: #fff;
+}
 .burger {
   width: 30px;
   height: 20px;
